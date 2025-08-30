@@ -17,7 +17,7 @@ const HomePage = () => {
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
+                    <h2 className="text-lg font-bold">$200</h2>
                 </div>
 
                 <div className="p-4 w-full bg-white shadow rounded">
@@ -26,7 +26,7 @@ const HomePage = () => {
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
+                    <h2 className="text-lg font-bold">$200</h2>
                 </div>
 
                 <div className="p-4 w-full bg-white shadow rounded">
@@ -35,7 +35,7 @@ const HomePage = () => {
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
+                    <h2 className="text-lg font-bold">$200</h2>
                 </div>
 
                 <div className="p-4 w-full bg-white shadow rounded">
@@ -44,7 +44,7 @@ const HomePage = () => {
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
+                    <h2 className="text-lg font-bold">$200</h2>
                 </div>
                 <div className="p-4 w-full bg-white shadow rounded">
                     <img src={item} className="w-full h-80 object-cover" alt="Super Pants" />
@@ -52,16 +52,32 @@ const HomePage = () => {
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
-                </div><div className="p-4 w-full bg-white shadow rounded">
+                    <h2 className="text-lg font-bold">$200</h2>
+                </div>
+                <div className="p-4 w-full bg-white shadow rounded">
                     <img src={item} className="w-full h-80 object-cover" alt="Super Pants" />
                     <h5 className="mt-2 font-semibold text-lg">
                         Super Pants: Beige (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$2599</h2>
+                    <h2 className="text-lg font-bold">$200</h2>
                 </div>
-                
+                <div className="p-4 w-full bg-white shadow rounded">
+                    <img src={item} className="w-full h-80 object-cover" alt="Super Pants" />
+                    <h5 className="mt-2 font-semibold text-lg">
+                        Super Pants: Beige (Classic Fit)
+                    </h5>
+                    <p className="text-gray-600">Men Super Flex Pants</p>
+                    <h2 className="text-lg font-bold">$200</h2>
+                </div>
+                <div className="p-4 w-full bg-white shadow rounded">
+                    <img src={item} className="w-full h-80 object-cover" alt="Super Pants" />
+                    <h5 className="mt-2 font-semibold text-lg">
+                        Super Pants: Beige (Classic Fit)
+                    </h5>
+                    <p className="text-gray-600">Men Super Flex Pants</p>
+                    <h2 className="text-lg font-bold">$200</h2>
+                </div>
 
             </div>
         </div>
