@@ -1,5 +1,6 @@
 import HomePage from "./Pages/HomePage/HomePage"
 import Login from "./Pages/Login/Login"
+import SignUp from "./Pages/Login/SignUp";
 import Navbar from "./Pages/Navbar/Navbar"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Router, Routes, Route, useLocation} from 'react-router-dom';
@@ -16,10 +17,11 @@ function App() {
 
   return (
     <>
-      {Location.pathname !== "/login" && <Navbar/>}
+      {Location.pathname !== "/login" && Location.pathname !== "/signUp" && <Navbar/>}
       <Routes>
         <Route path="/login" element={<Login/>}/>
-        <Route path="/Homepage" element={<HomePage/>}/>
+        <Route path="/homepage" element={<HomePage/>}/>
+        <Route path="/signUp" element={<SignUp/>}/>
       </Routes>
 
 

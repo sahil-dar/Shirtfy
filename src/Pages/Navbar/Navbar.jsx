@@ -1,10 +1,9 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faBox, faCartPlus, faMicrophone, faSearch,  } from '@fortawesome/free-solid-svg-icons'
-import Logo from "../../assets/Logo.png"
-import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons'
-import Login from '../Login/Login'
-import {Router, Routes, Route} from 'react-router-dom';
+import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars, faBox, faCartPlus, faMicrophone, faSearch,  } from '@fortawesome/free-solid-svg-icons';
+import Logo from "../../assets/Logo.png";
+import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
+import Login from '../Login/Login';
 
 
 
