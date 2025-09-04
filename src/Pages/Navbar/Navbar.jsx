@@ -4,13 +4,14 @@ import { faBars, faBox, faCartPlus, faMicrophone, faSearch,  } from '@fortawesom
 import Logo from "../../assets/Logo.png";
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import Login from '../Login/Login';
+import { Link } from 'react-router-dom';
 
 
 
 const Navbar = () => {
   return (
     <>
-      <div className='w-full   flex content-center  border border-b-2 wrapper '>
+      <div className='w-full flex content-center  border  wrapper '>
         <div className='w-full h-20 bg-white flex gap-10 navbar'>
             <div className='w-96 h-20 bg-white flex text-black justify-center items-center gap-10 font-bold text-lg nav-left'>
                 <FontAwesomeIcon className='cursor-pointer' icon={faBars} />
@@ -47,20 +48,25 @@ const Navbar = () => {
     className='absolute -right-10 top-8 text-2xl cursor-pointer'
     />
   
-    <FontAwesomeIcon
+    <Link to="/login">
+  <FontAwesomeIcon
     icon={faUser}
-    className='absolute -right-24 top-8 text-2xl cursor-pointer'
-    />
+    className="absolute -right-24 top-8 text-2xl cursor-pointer"
+  />
+</Link>
+
 
     <FontAwesomeIcon
     icon={faHeart} 
     className='absolute -right-36 top-8 text-2xl cursor-pointer'
     />
 
+    <Link to={"/cart"}>
     <FontAwesomeIcon
     icon={faCartPlus}
     className='absolute -right-48 top-8 text-2xl cursor-pointer'
     />
+    </Link>
 </div>
 
    
