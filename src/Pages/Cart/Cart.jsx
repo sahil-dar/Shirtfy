@@ -15,9 +15,10 @@ const Navigate = useNavigate();
     <button className='absolute p-3' onClick={() => Navigate(-1)}>
     <FontAwesomeIcon
     icon={faArrowLeft}
+    className='hover:text-red-500'
     />
     </button>
-       <h1 className='text-center font-bold text-2xl '>My Cart</h1>
+       <h1 className='text-center font-bold text-2xl hover:text-red-500 '>My Cart</h1>
         <div className='grid grid-cols-4 gap-16 p-3 mt-2'>
          <div className='border p-2'>
         <img src={jacket} />

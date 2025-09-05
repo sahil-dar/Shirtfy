@@ -14,21 +14,25 @@ const SignUp = () => {
                 <div className='h-3/2 w-2/5 bg-white place-items-center border border-gray-300 rounded-md p-8'>
                     <img className='h-10' src={souled} alt="" />
                 <h1 className='font-bold text-lg'>SignUp with The Souled Store</h1>
-                    <button className=' absolute left-96 pl-6 top-10 float-left' onClick={() => Navigate(-1)}>
+                    <button className=' absolute left-96 pl-6 top-10 float-left hover:text-red-500' onClick={() => Navigate(-1)}>
                         <FontAwesomeIcon
                             icon={faArrowLeft} />
                     </button>
                     <p className='float-left mt-4'>Username</p>
-                    <input type="text" placeholder='Username*' className='w-full border p-2 rounded-md' />
+                    <input type="text" placeholder='Username*' className='w-full border p-2 rounded-md focus:outline-red-500' />
                     <br />
                     <p className='float-left mt-4'>Email</p>
-                    <input type="email" placeholder='Email ID*' className='w-full border p-2 rounded-md' />
+                    <input type="email" placeholder='Email ID*' className='w-full border p-2 rounded-md focus:outline-red-500' />
                     <br />
                     <p className='float-left mt-4'>Password</p>
-                    <input type="password" placeholder='Create password*' className='w-full border p-2 rounded-md' />
+                    <input type="password" placeholder='Create password*' className='w-full border p-2 rounded-md focus:outline-red-500' />
                     <br />
                     <p className='float-left mt-4'>Confirm Password</p>
-                    <input type="password" placeholder='Confirmpassword*' className='w-full border p-2 rounded-md' />
+                    <input type="password" placeholder='Confirm password*' className='w-full border p-2 rounded-md focus:outline-red-500' />
+
+                    <p className='float-left mt-4'>Mobile Number</p>
+
+                    <input type="tel" placeholder='Mobile Number (For order status update) *' required className='w-full border p-2 rounded-md focus:outline-red-500' />
 
 
                     <p className='float-left w-full mt-2'>Gender</p>

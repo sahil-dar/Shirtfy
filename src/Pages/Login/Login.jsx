@@ -24,7 +24,7 @@ const Login = () => {
       <div className='w-full h-screen bg-white content-center place-items-center'>
         <div className='h-3/4 w-2/5 bg-white border border-gray-300 rounded-md place-items-center p-6'>
 
-          <button onClick={() => Navigate(-1)}>
+          <button className='hover:text-red-500' onClick={() => Navigate(-1)}>
 
             <FontAwesomeIcon
               icon={faArrowLeft} />
@@ -38,7 +38,7 @@ const Login = () => {
               icon={faEnvelope}
               className=' mb-2 mr-3 ml-2 border p-2 absolute'
             />
-            <input type="email" placeholder='Enter your email' className='w-10/12 border p-1 ml-12 ' />
+            <input type="email" placeholder='Enter your email' className='w-10/12 border p-1 ml-12 focus:outline-red-500 ' />
 
           </div>
           <br />
@@ -49,11 +49,11 @@ const Login = () => {
               icon={faLock}
               className=' mb-2 mr-3 ml-2 border p-2 absolute'
             />
-            <input type={showPassword ? 'text' : 'password'} placeholder='Enter your password' className='w-10/12 border p-1 ml-12 ' />
+            <input type={showPassword ? 'text' : 'password'} placeholder='Enter your password' className='w-10/12 border p-1 ml-12 focus:outline-red-500' />
             <FontAwesomeIcon
               icon={showPassword ? faEyeSlash : faEye}
               onClick={toggleVissiblePassword}
-              className='absolute -ml-7 mt-2 cursor-pointer'
+              className='absolute -ml-7 mt-2 cursor-pointer hover:text-red-500'
             />
             <br />
           </div>

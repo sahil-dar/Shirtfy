@@ -14,10 +14,10 @@ const Navbar = () => {
       <div className='w-screen box-border flex content-center border overflow-hidden  '>
         <div className='w-full h-20 bg-white flex gap-10 navbar'>
             <div className='w-full h-20 bg-white flex text-black p-2 items-center gap-6 font-bold ml-6 text-lg nav-left'>
-                <FontAwesomeIcon className='cursor-pointer' icon={faBars} />
-                <h2>MEN</h2>
-                <h2>WOMAN</h2>
-                <h2>SNEAKERS</h2>
+                <FontAwesomeIcon className='cursor-pointer hover:text-red-500' icon={faBars} />
+                <h2 className='hover:text-red-500'>MEN</h2>
+                <h2 className='hover:text-red-500'>WOMAN</h2>
+                <h2 className='hover:text-red-500'>SNEAKERS</h2>
             </div>
 
             <div className='w-full h-20 nav-middle'>
@@ -35,7 +35,7 @@ const Navbar = () => {
   <FontAwesomeIcon
   
     icon={faMicrophone}
-    className="absolute -left-3 top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
+    className="absolute -left-3  top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
   />
 
   <FontAwesomeIcon
@@ -45,26 +45,26 @@ const Navbar = () => {
 
     <FontAwesomeIcon
     icon={faBox}
-    className='absolute ml-3 top-8 text-2xl cursor-pointer'
+    className='absolute ml-3 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
   
     <Link to="/login">
   <FontAwesomeIcon
     icon={faUser}
-    className="absolute ml-16 top-8 text-2xl cursor-pointer"
+    className="absolute ml-16 top-8 text-2xl cursor-pointer hover:text-red-500"
   />
 </Link>
 
 
     <FontAwesomeIcon
     icon={faHeart} 
-    className='absolute ml-32 top-8 text-2xl cursor-pointer'
+    className='absolute ml-32 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
 
     <Link to={"/cart"}>
     <FontAwesomeIcon
     icon={faCartPlus}
-    className='absolute ml-48 top-8 text-2xl cursor-pointer'
+    className='absolute ml-48 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
     </Link>
 </div>
