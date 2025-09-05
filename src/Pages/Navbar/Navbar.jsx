@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <>
-      <div className='w-full flex content-center  border  wrapper '>
+      <div className='w-full flex content-center border  '>
         <div className='w-full h-20 bg-white flex gap-10 navbar'>
             <div className='w-96 h-20 bg-white flex text-black justify-center items-center gap-10 font-bold text-lg nav-left'>
                 <FontAwesomeIcon className='cursor-pointer' icon={faBars} />
