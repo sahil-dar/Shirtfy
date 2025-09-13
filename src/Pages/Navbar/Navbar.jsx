@@ -29,7 +29,7 @@ const Navbar = () => {
     type="text"
     placeholder="What are you looking for?"
   
-    className=" w-72 border border-black rounded-full p-2 -ml-56 mr-8 text-black placeholder-black focus:outline-red-600 "
+    className=" aboslute w-72 border border-black rounded-full p-2 pr-9 -ml-56 mr-8 text-black placeholder-black focus:outline-red-600 "
   />
 
   <FontAwesomeIcon
@@ -58,13 +58,13 @@ const Navbar = () => {
 
     <FontAwesomeIcon
     icon={faHeart} 
-    className='absolute ml-32 top-8 text-2xl cursor-pointer hover:text-red-500'
+    className='absolute ml-28 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
 
     <Link to={"/cart"}>
     <FontAwesomeIcon
     icon={faCartPlus}
-    className='absolute ml-48 top-8 text-2xl cursor-pointer hover:text-red-500'
+    className='absolute ml-44 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
     </Link>
 </div>

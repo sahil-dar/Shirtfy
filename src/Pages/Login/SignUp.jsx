@@ -14,7 +14,7 @@ const SignUp = () => {
                 <div className='h-3/2 w-2/5 bg-white place-items-center border border-gray-300 rounded-md p-8'>
                     <img className='h-10' src={souled} alt="" />
                 <h1 className='font-bold text-lg'>SignUp with The Souled Store</h1>
-                    <button className=' absolute left-96 pl-6 top-10 float-left hover:text-red-500' onClick={() => Navigate(-1)}>
+                    <button className=' absolute left-96 pl-6 top-10 float-left hover:text-red-500' title='Click to go back' onClick={() => Navigate(-1)}>
                         <FontAwesomeIcon
                             icon={faArrowLeft} />
                     </button>

@@ -24,7 +24,7 @@ const Login = () => {
       <div className='w-full h-screen bg-white content-center place-items-center'>
         <div className='h-3/4 w-2/5 bg-white border border-gray-300 rounded-md place-items-center p-6'>
 
-          <button className='hover:text-red-500' onClick={() => Navigate(-1)}>
+          <button className='hover:text-red-500' title='Click to go back' onClick={() => Navigate(-1)}>
 
             <FontAwesomeIcon
               icon={faArrowLeft} />

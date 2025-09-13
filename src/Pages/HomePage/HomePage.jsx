@@ -4,7 +4,7 @@ import item from '../../assets/item.avif'
 
 const HomePage = () => {
     return (
-        <div className="w-full min-h-screen pb-3">
+        <div className="w-screen min-h-screen pb-3">
             <img src={shoes} title='Sasuke Shoes' className="w-full object-cover" />
             <h1 className="w-full text-center font-bold text-3xl my-6">
                 NEW ARRIVALS
