@@ -19,6 +19,7 @@ function App() {
   return (
     <>
       {Location.pathname !== '/login' && Location.pathname !== '/signUp' && <Navbar/>}
+      
       <Routes>
         <Route path="/login" element={<Login/>}/>
         <Route path="/" element={<HomePage/>}/>
