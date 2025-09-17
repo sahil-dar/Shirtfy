@@ -59,11 +59,12 @@ const Navbar = () => {
   className="absolute ml-16 top-8 text-2xl cursor-pointer hover:text-red-500"
   onClick={() => setOpen((prev) => !prev)} 
 />
-
+<Link to={'/Favourites'}>
     <FontAwesomeIcon
     icon={faHeart} 
     className='absolute ml-28 top-8 text-2xl cursor-pointer hover:text-red-500'
     />
+</Link>
 
     <Link to={"/cart"}>
     <FontAwesomeIcon
