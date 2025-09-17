@@ -35,7 +35,7 @@ const Navbar = () => {
     type="text"
     placeholder="What are you looking for?"
   
-    className=" aboslute w-72 border border-black rounded-full p-2 pr-9 -ml-56 mr-8 text-black placeholder-black focus:outline-red-600 "
+    className=" aboslute w-72 border border-black rounded-full p-2 pr-9 -ml-56 mr-8 font-serif text-black placeholder-black focus:outline-red-600 "
   />
 
   <FontAwesomeIcon
