@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { useState } from 'react'
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
-import { faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
+import { faInfo, faListDots, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import '../../../src/index.css'
 
 const DropDownBars = () => {

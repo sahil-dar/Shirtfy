@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBox, faCartPlus, faL, faMicrophone, faSearch,  } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faBox, faCartPlus, faL, faMicrophone, faSearch, } from '@fortawesome/free-solid-svg-icons';
 import Logo from "../../assets/Logo.png";
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
-import Login from '../Login/Login';
 import { Link } from 'react-router-dom';
 import DropDown from './DropDownProfile';
 import DropDownBars from './DropDownBars';
@@ -18,68 +17,67 @@ const Navbar = () => {
     <>
       <div className='w-screen box-border flex content-center border overflow-hidden  '>
         <div className='w-full h-20 bg-white flex gap-10 navbar'>
-            <div className='w-full h-20 bg-white flex text-black p-2 items-center gap-6 font-bold ml-6 text-lg nav-left'>
-                <FontAwesomeIcon className='cursor-pointer hover:text-red-500' icon={faBars}
-                onClick={() => setIsOpen((prev) => !prev)}  />
-                <h2 className='hover:text-red-500'>MEN</h2>
-                <h2 className='hover:text-red-500'>WOMAN</h2>
-                <h2 className='hover:text-red-500'>SNEAKERS</h2>
+          <div className='w-full h-20 bg-white flex text-black p-2 items-center gap-6 font-bold ml-6 text-lg nav-left'>
+            <FontAwesomeIcon className='cursor-pointer hover:text-red-500' icon={faBars}
+              onClick={() => setIsOpen((prev) => !prev)} />
+            <h2 className='hover:text-red-500'>MEN</h2>
+            <h2 className='hover:text-red-500'>WOMAN</h2>
+            <h2 className='hover:text-red-500'>SNEAKERS</h2>
+          </div>
+
+          <div className='w-full h-20 nav-middle'>
+            <img className='h-20' src={Logo} />
+          </div>
+
+          <div className="w-full relative float-left content-center nav-right justify-between">
+            <input
+              type="text"
+              placeholder="What are you looking for?"
+
+              className=" aboslute w-72 border border-black rounded-full p-2 pr-9 -ml-56 mr-8 font-serif text-black placeholder-black focus:outline-red-600 "
+            />
+            <div className='justify-between ml-8'>
+              <FontAwesomeIcon
+                icon={faUser}
+                className="absolute ml-16 top-8 text-2xl cursor-pointer hover:text-red-500 hover"
+                onClick={() => setOpen((prev) => !prev)}
+              />
+              <Link to={'/Favourites'}>
+                <FontAwesomeIcon
+                  icon={faHeart}
+                  title='Favourites'
+                  className='absolute ml-32 top-8 text-2xl cursor-pointer hover:text-red-500'
+                />
+              </Link>
+              <Link to={"/cart"}>
+                <FontAwesomeIcon
+                  icon={faCartPlus}
+                  title='Cart'
+                  className='absolute ml-48 top-8 text-2xl cursor-pointer hover:text-red-500'
+                />
+              </Link>
+
+              <FontAwesomeIcon icon={faBox} className='absolute ml-64 top-8 text-2xl cursor-pointer hover:text-red-500' />
+
             </div>
+            <FontAwesomeIcon
+              icon={faSearch}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
+            />
+            <FontAwesomeIcon
 
-            <div className='w-full h-20 nav-middle'>
-                <img className='h-20' src={Logo}/>
-            </div>
+              icon={faMicrophone}
+              className="absolute -left-3  top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
+            />
 
-            <div className="w-full relative float-left content-center nav-right justify-between">
-  <input
-    type="text"
-    placeholder="What are you looking for?"
-  
-    className=" aboslute w-72 border border-black rounded-full p-2 pr-9 -ml-56 mr-8 font-serif text-black placeholder-black focus:outline-red-600 "
-  />
-
-  <FontAwesomeIcon
-  
-    icon={faMicrophone}
-    className="absolute -left-3  top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
-  />
-
-  <FontAwesomeIcon
-    icon={faSearch}
-    className="absolute left-4 top-1/2 transform -translate-y-1/2 text-black cursor-pointer"
-  />
-
-    <FontAwesomeIcon
-    icon={faBox}
-    className='absolute ml-3 top-8 text-2xl cursor-pointer hover:text-red-500'
-    />
-  
-  <FontAwesomeIcon
-  icon={faUser}
-  className="absolute ml-16 top-8 text-2xl cursor-pointer hover:text-red-500"
-  onClick={() => setOpen((prev) => !prev)} 
-/>
-<Link to={'/Favourites'}>
-    <FontAwesomeIcon
-    icon={faHeart} 
-    className='absolute ml-28 top-8 text-2xl cursor-pointer hover:text-red-500'
-    />
-</Link>
-
-    <Link to={"/cart"}>
-    <FontAwesomeIcon
-    icon={faCartPlus}
-    className='absolute ml-44 top-8 text-2xl cursor-pointer hover:text-red-500'
-    />
-    </Link>
-</div>
+          </div>
         </div>
       </div>
-      {open && <DropDown/>}
+      {open && <DropDown />}
 
-      {isOpen && <DropDownBars/>}
-      
-      
+      {isOpen && <DropDownBars />}
+
+
     </>
   )
 }

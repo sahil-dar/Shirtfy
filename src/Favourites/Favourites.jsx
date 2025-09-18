@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import jacket from '../assets/korean.avif';
 import shoe from '../assets/Liverpool_FC.avif';
+import HeartToggle from './HearToggle';
 import { useNavigate } from 'react-router-dom';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const Cart = () => {
 
-    const Navigate = useNavigate();
+    const [showFilled, setShowFilled] = useState(false);
+
+    const toggleFilledHeart = () => {
+        setShowFilled(!showFilled)
+    }
 
     return (
         <>
@@ -21,74 +27,102 @@ const Cart = () => {
                 </button>
                 <h1 className='text-center font-bold text-2xl hover:text-red-500 '>Favourites</h1>
                 <div className='grid grid-cols-4 gap-16 p-3 mt-2 '>
-                    <div className='border p-2 '>
-                        <img src={jacket} className=''/>
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 top-44  text-pink-500' />
-                        <h1 className='font-semibold '>Korean</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold '>Buy Now</button>
-                    </div>
+                    <div className='border p-2 relative'>
+  {/* Heart icon at top-right */}
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <img src={jacket} className='' />
+  <h1 className='font-semibold'>Korean</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
+<div className='border p-2 relative'>
+  <img src={shoe} alt="" />
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+    <h1 className='font-semibold'>LiverPool Fc</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    <div className='border p-2'>
-                        <img src={shoe} alt="" />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 top-44  text-pink-500' />
-                        <h1 className='font-semibold '>LiverPool Fc</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
+<div className='border p-2 relative'>
+  <img src={jacket} />
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <h1 className='font-semibold'>Korean</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    </div>
-                    <div className='border p-2'>
-                        <img src={jacket} />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 top-44 text-pink-500 ' />
-                        <h1 className='font-semibold '>Korean</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
+<div className='border p-2 relative'>
+  <img src={shoe} alt="" />
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <h1 className='font-semibold'>LiverPool Fc</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    </div>
+<div className='border p-2 relative'>
+  <img src={jacket} />
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <p>$60</p>
+    <h1 className='font-semibold'>Korean</h1>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    <div className='border p-2'>
-                        <img src={shoe} alt="" />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 top-44 text-pink-500 ' />
-                        <h1 className='font-semibold '>LiverPool Fc</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
+<div className='border p-2 relative'>
+  <img src={shoe} alt="" />
+  <div className="absolute top-2 right-2">
+    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <h1 className='font-semibold'>LiverPool Fc</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    </div>
-                    <div className='border p-2'>
-                        <img src={jacket} />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 bottom-10 text-pink-500' />
-                        <h1 className='font-semibold '>Korean</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
+<div className='border p-2 relative'>
+  <img src={jacket} />
+  <div className='absolute bottom-7 right-10'>
+    <HeartToggle className='absolute bottom-72 -right-8' size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <h1 className='font-semibold'>Korean</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
-                    </div>
-
-                    <div className='border p-2'>
-                        <img src={shoe} alt="" />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 bottom-10 text-pink-500 ' />
-                        <h1 className='font-semibold '>LiverPool Fc</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
-
-                    </div>
-                    <div className='border p-2'>
-                        <img src={jacket} />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 bottom-10 text-pink-500' />
-                        <h1 className='font-semibold '>Korean</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
-
-                    </div>
-
-                    <div className='border p-2'>
-                        <img src={shoe} alt="" />
-                        <FontAwesomeIcon icon={faHeart} className='absolute ml-52 bottom-10 text-pink-500' />
-                        <h1 className='font-semibold'>LiverPool Fc</h1>
-                        <p>$60</p>
-                        <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>Buy Now</button>
-
-                    </div>
+<div className='border p-2 relative'>
+  <img src={shoe} alt="" />
+  <div className='absolute bottom-7 right-10'>
+    <HeartToggle className='absolute bottom-72 -right-8' size={20} filledColor="red" emptyColor="gray" />
+  </div>
+  <h1 className='font-semibold'>LiverPool Fc</h1>
+  <p>$60</p>
+  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
+    Buy Now
+  </button>
+</div>
 
 
 
