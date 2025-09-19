@@ -2,6 +2,8 @@ import React from 'react'
 import shoes from '../../assets/shoes.webp'
 import './HomePage.css'
 import item from '../../assets/item.avif'
+import hero1 from '../../assets/hero1.avif';
+import hero2 from '../../assets/hero3.avif'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";  // This contains arrow styles
@@ -10,7 +12,7 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const HomePage = () => {
-    const images = [shoes, shoes, shoes];
+    const images = [shoes, hero1, hero2];
 
     function CustomArrows(props) {
   const { className, style, onClick, direction } = props;
@@ -40,7 +42,7 @@ const HomePage = () => {
     dots: true,
     arrows: true,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 3000,
     infinite: true,
     speed: 1500,
     slidesToShow: 1,
@@ -52,7 +54,7 @@ const HomePage = () => {
 
  
     return (
-        <div className="w-screen min-h-screen pb-3">
+        <div className="w-screen min-h-screen pb-3 pt-20">
            <div style={{  margin: '0 auto', position: 'relative' }}>
       <Slider {...settings}>
         {images.map((url, index) => (

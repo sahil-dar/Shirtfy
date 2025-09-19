@@ -9,7 +9,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const Cart = () => {
-
+    const Navigate = useNavigate();
     const [showFilled, setShowFilled] = useState(false);
 
     const toggleFilledHeart = () => {
@@ -18,7 +18,7 @@ const Cart = () => {
 
     return (
         <>
-            <div className=' w-screen min-h-screen p-6 box-border '>
+            <div className=' w-screen min-h-screen p-6 box-border pt-24'>
                 <button className='absolute p-3' onClick={() => Navigate(-1)}>
                     <FontAwesomeIcon
                         icon={faArrowLeft}

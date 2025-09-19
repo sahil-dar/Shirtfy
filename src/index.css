@@ -3,6 +3,41 @@
 @tailwind utilities;
 
 
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+#wrapper { width: 95%; margin: 0 auto; }
+#content { width: 70%; float: left; }
+#sidebar { width: 30%; float: right; }
+
+
+/* Ensure proper mobile viewport */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+  
+  /* Improve touch targets */
+  button, a, [role="button"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent horizontal scroll */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
 body{
     overflow-x: hidden;
 }

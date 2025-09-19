@@ -11,7 +11,7 @@ const Navigate = useNavigate();
 
   return (
     <>
-<div className=' w-screen min-h-screen p-6 box-border '>
+<div className=' w-screen min-h-screen p-6 box-border pt-24'>
     <button className='absolute p-3' onClick={() => Navigate(-1)}>
     <FontAwesomeIcon
     icon={faArrowLeft}
