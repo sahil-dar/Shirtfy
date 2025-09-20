@@ -1,9 +1,11 @@
 import React from 'react'
 import shoes from '../../assets/shoes.webp'
 import './HomePage.css'
-import item from '../../assets/item.avif'
+import item from '../../assets/BlackPanther.avif'
+import Batman from '../../assets/Batman.avif'
 import hero1 from '../../assets/hero1.avif';
 import hero2 from '../../assets/hero3.avif'
+import Ben10 from '../../assets/Ben-10.avif'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";  // This contains arrow styles
@@ -12,7 +14,7 @@ import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 
 const HomePage = () => {
-    const images = [shoes, hero1, hero2];
+    const images = [Batman, hero1, hero2, shoes];
 
     function CustomArrows(props) {
   const { className, style, onClick, direction } = props;
@@ -83,9 +85,9 @@ const HomePage = () => {
                 </div>
 
                 <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
+                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
                     <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
+                        Ben 10 : T-shirt (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
                     <h2 className="text-lg font-bold">$200</h2>
@@ -101,9 +103,9 @@ const HomePage = () => {
                 </div>
 
                 <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
+                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
                     <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
+                        Ben 10 : T-shirt (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
                     <h2 className="text-lg font-bold">$200</h2>
@@ -117,9 +119,9 @@ const HomePage = () => {
                     <h2 className="text-lg font-bold">$200</h2>
                 </div>
                 <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
+                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
                     <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
+                        Ben 10 : T-shirt (Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
                     <h2 className="text-lg font-bold">$200</h2>
@@ -133,9 +135,9 @@ const HomePage = () => {
                     <h2 className="text-lg font-bold">$200</h2>
                 </div>
                 <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
+                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
                     <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
+                        Ben 10 : T-shirt(Classic Fit)
                     </h5>
                     <p className="text-gray-600">Men Super Flex Pants</p>
                     <h2 className="text-lg font-bold">$200</h2>
