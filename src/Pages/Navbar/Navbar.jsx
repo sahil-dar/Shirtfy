@@ -16,7 +16,6 @@ const Navbar = () => {
     <>
       <div className="fixed top-0 left-0 z-50 w-screen box-border border bg-white ">
         <div className="w-full h-20 flex items-center justify-between px-6">
-          {/* Left menu */}
           <div className="flex items-center gap-6 font-bold text-lg text-black">
             <FontAwesomeIcon
               className="cursor-pointer hover:text-red-500"
@@ -28,7 +27,6 @@ const Navbar = () => {
             <h2 className="hover:text-red-500">SNEAKERS</h2>
           </div>
 
-          {/* Middle logo + search */}
           <div className="flex items-center gap-6">
             <img className="h-14" src={Logo} alt="Logo" />
             <SearchBar onSearch={(q) => alert("Searching for: " + q)} />
@@ -36,7 +34,6 @@ const Navbar = () => {
 
           </div>
 
-          {/* Right icons */}
           <div className='flex justify-between mr-7'>
           <div className="flex items-center gap-6 text-2xl ">
             <FontAwesomeIcon

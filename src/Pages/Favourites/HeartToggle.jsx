@@ -1,4 +1,3 @@
-// src/components/HeartToggle.js
 import React, { useState } from "react";
 import { FaHeart, FaRegHeart } from "react-icons/fa";
 
