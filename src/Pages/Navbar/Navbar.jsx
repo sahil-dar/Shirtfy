@@ -6,7 +6,7 @@ import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
 import { Link } from 'react-router-dom';
 import DropDown from './DropDownProfile';
 import DropDownBars from './DropDownBars';
-import SearchBar from '../../SearchBar/SearchBar';
+import SearchBar from '../SearchBar/SearchBar';
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);

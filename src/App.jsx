@@ -2,7 +2,7 @@ import Cart from "./Pages/Cart/Cart";
 import HomePage from "./Pages/HomePage/HomePage"
 import Login from "./Pages/Login/Login"
 import SignUp from "./Pages/Login/SignUp";
-import Favourites from './Favourites/Favourites';
+import Favourites from './Pages/Favourites/Favourites';
 import Navbar from "./Pages/Navbar/Navbar"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Router, Routes, Route, useLocation} from 'react-router-dom';

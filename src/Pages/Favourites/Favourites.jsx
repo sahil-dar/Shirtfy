@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import jacket from '../assets/korean.avif';
-import shoe from '../assets/Liverpool_FC.avif';
+import jacket from '../../assets/korean.avif';
+import shoe from '../../assets/Liverpool_FC.avif';
 import HeartToggle from './HeartToggle';
 import { useNavigate } from 'react-router-dom';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
