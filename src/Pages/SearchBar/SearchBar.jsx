@@ -3,7 +3,7 @@ import { faMicrophone, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
-const SearchBar = ({onSearch}) => {
+const SearchBar = ({onSearch, placeholder="What are you looking for?", height= "7vh", width="25vw"}) => {
 const [query, setQuery] = useState("");
 
   const handleDown = (e) => {
@@ -12,16 +12,20 @@ const [query, setQuery] = useState("");
     }
   };
 
+
+
   return (
     <>
+
       <div className="w-72 relative float-left content-center nav-right justify-between">
             <input
               type="text"
-              placeholder="What are you looking for?"
+              placeholder = {placeholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleDown}
-            className=" absolute w-72 border border-black rounded-full p-2 pr-9 ml-16 -top-5 font-serif text-black placeholder-black focus:outline-red-600 "
+              style={{height:height, width:width}}
+            className=" absolute border border-black rounded-full p-2 pr-9 ml-16 -top-5 font-serif text-black placeholder-black focus:outline-red-600 "
             />
             <FontAwesomeIcon
               icon={faSearch}

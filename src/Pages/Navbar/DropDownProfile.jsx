@@ -5,12 +5,13 @@ import { Link } from 'react-router-dom';
 import { faArrowRightFromBracket, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 import '../../../src/index.css'
 
+
 const DropDownProfile = () => {
 
   return (
     <>
-    <div className='flex flex-col DropDownProfile'>
-  <ul className='flex flex-col gap-3'>
+    <div className='flex absolute flex-col mt-6 DropDownProfile'>
+  <ul className='flex flex-col gap-3 '>
     <li className='flex items-center gap-2'> 
       <FontAwesomeIcon className='hover:text-red-500' icon={faUser} />
       <Link className='hover:text-red-500' to={'/login'}>Login</Link>

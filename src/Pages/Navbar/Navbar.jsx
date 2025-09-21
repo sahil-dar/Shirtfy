@@ -18,12 +18,12 @@ const Navbar = () => {
         <div className="w-full h-20 flex items-center justify-between px-6">
           <div className="flex items-center gap-6 font-bold text-lg text-black">
             <FontAwesomeIcon
-              className="cursor-pointer hover:text-red-500"
+              className="cursor-pointer hover:text-red-500 ml-2"
               icon={faBars}
               onClick={() => setIsOpen((prev) => !prev)}
             />
             <h2 className="hover:text-red-500">MEN</h2>
-            <h2 className="hover:text-red-500">WOMAN</h2>
+            <h2 className="hover:text-red-500">WOMAN</h2> 
             <h2 className="hover:text-red-500">SNEAKERS</h2>
           </div>
 

@@ -11,10 +11,67 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";  // This contains arrow styles
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import Card from './Card'
 
 
 const HomePage = () => {
     const images = [Batman, hero1, hero2, shoes];
+
+
+    const items = [
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        },
+        {
+            title:"Super Pants: Beige (Classic Fit)",
+            subTitle:"Super Pants",
+            image:item,
+            price: "$200",
+        }
+    ]
+
 
     function CustomArrows(props) {
   const { className, style, onClick, direction } = props;
@@ -75,74 +132,15 @@ const HomePage = () => {
             </h1>
 
             <div className="grid grid-cols-4 gap-6 px-6">
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
+                
+                    
+                   {items.map((items, index) => (
+                    <Card title={items.title} subTitle={items.subTitle} price={items.price} image={items.image} />
+                    
+                   ))}
+               
 
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Ben 10 : T-shirt (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Ben 10 : T-shirt (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Ben 10 : T-shirt (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={item} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Super Pants: Beige (Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-                <div className="p-4 w-full bg-white shadow rounded">
-                    <img src={Ben10} className="w-full h-80 object-cover cursor-pointer" title="Super Pants" />
-                    <h5 className="mt-2 font-semibold text-lg">
-                        Ben 10 : T-shirt(Classic Fit)
-                    </h5>
-                    <p className="text-gray-600">Men Super Flex Pants</p>
-                    <h2 className="text-lg font-bold">$200</h2>
-                </div>
-
+                
             </div>
 
             <footer className='flex w-full border bg-zinc-50 p-6 mt-4 content-center justify-around'>

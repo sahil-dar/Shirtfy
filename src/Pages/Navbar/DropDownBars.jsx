@@ -9,7 +9,7 @@ const DropDownBars = () => {
 
   return (
     <>
-    <div className='flex flex-col text-md cursor-pointer font-semibold DropDownBars'>
+    <div className='flex flex-col text-md cursor-pointer mt-6 font-semibold DropDownBars'>
   <ul className='flex flex-col gap-3'> 
     <li className='flex items-center gap-2 '>
       <h1 className='hover:text-red-500'>MENSWEAR</h1>
