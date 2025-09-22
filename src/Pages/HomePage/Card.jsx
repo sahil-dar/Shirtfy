@@ -3,7 +3,7 @@ import item from '../../assets/korean.avif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight, faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
-const Card = ({title = "", subTitle = "Super Pants", price = "$200", image= item}) => {
+const Card = ({title = "", subTitle = "Super Pants", price = "$200", image}) => {
   return (
     <>
     <div className='border p-2 rounded-2xl'>
@@ -18,3 +18,4 @@ const Card = ({title = "", subTitle = "Super Pants", price = "$200", image= item
 }
 
 export default Card
+ 
