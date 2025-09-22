@@ -137,9 +137,7 @@ const HomePage = () => {
                    {items.map((items, index) => (
                     <Card title={items.title} subTitle={items.subTitle} price={items.price} image={items.image} />
                     
-                   ))}
-               
-
+                ))}
                 
             </div>
 

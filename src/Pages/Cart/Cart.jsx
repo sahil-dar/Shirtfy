@@ -63,7 +63,18 @@ const Cart = () => {
 
     return (
         <>
-        <div className="grid grid-cols-4 gap-6 px-6 mt-20">
+            <div className=' w-screen min-h-screen p-6 box-border pt-20'>
+
+         <button className='absolute p-3' onClick={() => Navigate(-1)}>
+                            <FontAwesomeIcon
+                                icon={faArrowLeft}
+                                className='hover:text-red-500'
+                            />
+                        </button>
+        <h1 className="w-full text-center font-bold text-3xl  hover:text-red-500 my-6">
+                My Cart
+            </h1>
+        <div className="grid grid-cols-4 gap-6 px-6 ">
         {Products.map((Products, index) => (
             <Card title={Products.title} subTitle={Products.subTitle} image={Products.image} price={Products.price} />
         ))}
@@ -107,6 +118,7 @@ const Cart = () => {
                 </div>
 
             </footer>
+            </div>
         </>
     )
 }

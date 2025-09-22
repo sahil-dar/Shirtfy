@@ -1,16 +1,69 @@
 import React, { useState } from 'react';
 import jacket from '../../assets/korean.avif';
 import shoe from '../../assets/Liverpool_FC.avif';
+import item from '../../assets/item.avif'
 import HeartToggle from './HeartToggle';
 import { useNavigate } from 'react-router-dom';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import Card from '../HomePage/Card';
 
 const Cart = () => {
     const Navigate = useNavigate();
     const [showFilled, setShowFilled] = useState(false);
+
+    const Fav = [
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: jacket,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+            {
+                title: "Super Pants: Beige (Classic Fit)",
+                subTitle: "Super Pants",
+                image: item,
+                price: "$200",
+            },
+        ]
 
     const toggleFilledHeart = () => {
         setShowFilled(!showFilled)
@@ -25,110 +78,23 @@ const Cart = () => {
                         className='hover:text-red-500'
                     />
                 </button>
-                <h1 className='text-center font-bold text-2xl hover:text-red-500 '>Favourites</h1>
-                <div className='grid grid-cols-4 gap-16 p-3 mt-2 '>
-                    <div className='border p-2 relative'>
-  {/* Heart icon at top-right */}
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <img src={jacket} className='' />
-  <h1 className='font-semibold'>Korean</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
+                <h1 className='text-center font-bold text-2xl hover:text-red-500 pb-8'>Favourites</h1>
+                  
 
-<div className='border p-2 relative'>
-  <img src={shoe} alt="" />
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-    <h1 className='font-semibold'>LiverPool Fc</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={jacket} />
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <h1 className='font-semibold'>Korean</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={shoe} alt="" />
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <h1 className='font-semibold'>LiverPool Fc</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={jacket} />
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <p>$60</p>
-    <h1 className='font-semibold'>Korean</h1>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={shoe} alt="" />
-  <div className="absolute top-2 right-2">
-    <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <h1 className='font-semibold'>LiverPool Fc</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={jacket} />
-  <div className='absolute bottom-7 right-10'>
-    <HeartToggle className='absolute bottom-72 -right-8' size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <h1 className='font-semibold'>Korean</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-<div className='border p-2 relative'>
-  <img src={shoe} alt="" />
-  <div className='absolute bottom-7 right-10'>
-    <HeartToggle className='absolute bottom-72 -right-8' size={20} filledColor="red" emptyColor="gray" />
-  </div>
-  <h1 className='font-semibold'>LiverPool Fc</h1>
-  <p>$60</p>
-  <button className='w-full bg-red-500 border rounded-md p-2 text-white font-semibold'>
-    Buy Now
-  </button>
-</div>
-
-
-
-                </div>
-
+            <div className="grid grid-cols-4 gap-6 px-6">
+                
+                    
+                   {Fav.map((fav, index) => (
+                    <Card title={fav.title} subTitle={fav.subTitle} price={fav.price} image={fav.image} />
+                    
+                ))}
+                <div className="absolute top-3 right-3">
+        <HeartToggle size={20} filledColor="red" emptyColor="gray" />
+      </div>
             </div>
+
+</div>
+
             <footer className='flex w-full border bg-zinc-50 p-6 mt-4 content-center justify-around'>
                 <div className=''>
                     <h1 className='text-red-500 font-bold text-lg'>NEED HELP</h1>
