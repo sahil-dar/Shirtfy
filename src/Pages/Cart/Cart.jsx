@@ -80,7 +80,7 @@ const Cart = () => {
         ))}
     </div>
 
-            <footer className='flex w-full border bg-zinc-50 p-6 mt-4 content-center justify-around'>
+            <footer className='flex cursor-default w-full border bg-zinc-50 p-6 mt-4 content-center justify-around'>
                 <div className=''>
                     <h1 className='text-red-500 font-bold text-lg'>NEED HELP</h1>
                     <p className='hover:text-red-500'>Contact Us</p>
