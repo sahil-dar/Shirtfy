@@ -12,14 +12,13 @@ import {Router, Routes, Route, useLocation} from 'react-router-dom';
 function App() {
   
   const Location = useLocation()
-  console.log(Location.pathname);
 
   
 
 
   return (
     <>
-    {Location.pathname !== '/login' && Location.pathname !== '/signUp' && <Navbar/>}
+    {Location.pathname !== '/login' && Location.pathname !== '/SignUp' && <Navbar/>}
       
       <Routes>
         <Route path="/" element={<HomePage/>}/>

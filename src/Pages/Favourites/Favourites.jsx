@@ -86,9 +86,7 @@ const Cart = () => {
             <Card title={fav.title} subTitle={fav.subTitle} price={fav.price} image={fav.image} />
 
           ))}
-          <div className="absolute top-3 right-3">
-            <HeartToggle size={20} filledColor="red" emptyColor="gray" />
-          </div>
+          
         </div>
 
       </div>
