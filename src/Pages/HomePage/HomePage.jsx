@@ -8,7 +8,7 @@ import hero2 from '../../assets/hero3.avif'
 import Ben10 from '../../assets/Ben-10.avif'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";  // This contains arrow styles
+import "slick-carousel/slick/slick-theme.css"; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Card from './Card'
@@ -135,7 +135,7 @@ const HomePage = () => {
                 
                     
                    {items.map((items, index) => (
-                    <Card title={items.title} subTitle={items.subTitle} price={items.price} image={items.image} />
+                    <Card key={index} title={items.title} subTitle={items.subTitle} price={items.price} image={items.image} />
                     
                 ))}
                 

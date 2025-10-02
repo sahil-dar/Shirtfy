@@ -22,7 +22,9 @@ const Navbar = () => {
               icon={faBars}
               onClick={() => setIsOpen((prev) => !prev)}
             />
+            <Link to={'/Men'}>
             <h2 className="hover:text-red-500">MEN</h2>
+            </Link>
             <h2 className="hover:text-red-500">WOMAN</h2> 
             <h2 className="hover:text-red-500">SNEAKERS</h2>
           </div>

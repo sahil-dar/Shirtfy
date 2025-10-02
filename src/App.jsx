@@ -6,6 +6,7 @@ import Favourites from './Pages/Favourites/Favourites';
 import Navbar from "./Pages/Navbar/Navbar"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Router, Routes, Route, useLocation} from 'react-router-dom';
+import Men from "./Pages/Navbar/Men";
 
 
 
@@ -26,6 +27,7 @@ function App() {
         <Route path="/signUp" element={<SignUp/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/Favourites" element={<Favourites/>}/>
+        <Route path="/Men" element={<Men/>}/>
       </Routes>
 
 

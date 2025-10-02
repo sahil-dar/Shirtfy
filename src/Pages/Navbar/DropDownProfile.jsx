@@ -10,7 +10,7 @@ const DropDownProfile = () => {
 
   return (
     <>
-    <div className='flex absolute flex-col mt-6 DropDownProfile'>
+    <div className='flex absolute flex-col mt-3 DropDownProfile'>
   <ul className='flex flex-col gap-3 '>
     <li className='flex items-center gap-2'> 
       <FontAwesomeIcon className='hover:text-red-500' icon={faUser} />

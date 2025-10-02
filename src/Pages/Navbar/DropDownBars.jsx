@@ -1,31 +1,49 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
-import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
-import { Link } from 'react-router-dom';
-import { faInfo, faListDots, faQuestion } from '@fortawesome/free-solid-svg-icons';
-import '../../../src/index.css'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const DropDownBars = () => {
-
   return (
-    <>
-    <div className='flex flex-col text-md cursor-pointer mt-6 font-semibold DropDownBars'>
-  <ul className='flex flex-col gap-3'> 
-    <li className='flex items-center gap-2 '>
-      <h1 className='hover:text-red-500'>MENSWEAR</h1>
-    </li>
+    <div className='flex absolute flex-col left-1 DropDownBars'>
+ <ul className="flex flex-col gap-3 text-gray-800 font-semibold text-md text-center">
+        <li>
+          <Link
+            to="/menswear"
+            className="block hover:text-red-500 transition-colors"
+          >
+            MENSWEAR
+          </Link>
+        </li>
 
-    <li className='flex items-center gap-2'>
-      <h1 className='hover:text-red-500'>FOOTWEAR</h1>
-    </li>
+        <li>
+          <Link
+            to="/footwear"
+            className="block hover:text-red-500 transition-colors"
+          >
+            FOOTWEAR
+          </Link>
+        </li>
 
-    <li className='hover:text-red-500'>PARTYWEAR</li>
-    <li className='hover:text-red-500'> MORE</li>
-  </ul>
+        <li>
+          <Link
+            to="/partywear"
+            className="block hover:text-red-500 transition-colors"
+          >
+            PARTYWEAR
+          </Link>
+        </li>
+
+        <li>
+          <Link
+            to="/more"
+            className="block hover:text-red-500 transition-colors"
+          >
+            MORE
+          </Link>
+        </li>
+      </ul>
 </div>
 
-    </>
-  )
-}
+  );
+};
 
 export default DropDownBars;
