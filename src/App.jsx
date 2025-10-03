@@ -7,6 +7,8 @@ import Navbar from "./Pages/Navbar/Navbar"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {Router, Routes, Route, useLocation} from 'react-router-dom';
 import Men from "./Pages/Navbar/Men";
+import Woman from "./Pages/Navbar/Woman";
+import Sneakers from "./Pages/Navbar/Sneakers";
 
 
 
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <>
-    {Location.pathname !== '/login' && Location.pathname !== '/SignUp' && <Navbar/>}
+    {Location.pathname !== '/login' && Location.pathname !== '/signUp' && <Navbar/>}
       
       <Routes>
         <Route path="/" element={<HomePage/>}/>
@@ -28,6 +30,9 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/Favourites" element={<Favourites/>}/>
         <Route path="/Men" element={<Men/>}/>
+        <Route path="/Woman" element={<Woman/>}/>
+        <Route path="/Sneakers" element={<Sneakers/>}/>
+
       </Routes>
 
 

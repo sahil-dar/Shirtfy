@@ -1,13 +1,13 @@
 import React from 'react'
 import Card from '../HomePage/Card'
-import item from '../../assets/Adidas-jacket.avif'
+import item from '../../assets/Womans.avif'
 import { useNavigate } from 'react-router-dom';
 import { faLock, faArrowLeft, faBackward } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 
 
-const Men = () => {
+const Woman = () => {
       const Navigate = useNavigate();
 
        const items = [
@@ -71,7 +71,7 @@ const Men = () => {
               icon={faArrowLeft} />
           </button>
       <h1 className="w-full text-center font-bold text-3xl my-6">
-                MENS COLLECTION
+                WOMANS COLLECTION
             </h1>
 
             <div className="grid grid-cols-4 gap-6 px-6">
@@ -127,4 +127,4 @@ const Men = () => {
   )
 }
 
-export default Men
+export default Woman;
