@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import souled from "../../assets/souled-logo.png";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const SignUp = () => {
   const [data, setData] = useState({
@@ -12,58 +10,79 @@ const SignUp = () => {
     password: "",
     confirm_password: "",
     phone_number: "",
-  })
-  const [error, setError] = useState([]);
-  
+  });
+
+  const [errors, setErrors] = useState({});
+
   const handleInputChange = (e) => {
-    setData({ ...data, [e.target.name]: e.target.value })
-  }
+    const { name, value } = e.target;
+    setData({ ...data, [name]: value });
+
+    if (errors[name]) {
+      setErrors((prev) => ({ ...prev, [name]: undefined }));
+    }
+  };
 
   const Navigate = useNavigate();
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrors({}); 
 
     try {
-      await axios.post(
-        "http://192.168.1.8:4000/api/v1/auth/signUp", data
-      )
-      toast.success("SignUp Successfully")
-      Navigate('/')
-      
-      
-    } catch (err) {
+      const res = await axios.post(
+        "https://kczjvhkd-4000.inc1.devtunnels.ms/api/v1/auth/signUp",
+        data
+      );
 
-      
-const errorMessage = err.response?.data?.message || err.response?.data?.err;
-      if (errorMessage.toLowerCase().includes("missing required fields")) {
-         if (errorMessage.toLowerCase().includes("username")) {
-          return toast.error("Username is Required!")   
+      console.log("SignUp Successful:", res.data);
+      Navigate("/");
+
+    } catch (err) {
+      console.log("Raw error:", err);
+
+      const newErrors = {};
+
+      const errorMessage =
+        err.response?.data?.message ||
+        err.response?.data?.err ||
+        "Server error";
+
+      if (
+        typeof errorMessage === "string" &&
+        errorMessage.toLowerCase().includes("missing required fields")
+      ) {
+        if (errorMessage.toLowerCase().includes("username")) {
+          newErrors.username = "Username is required!";
         }
         if (errorMessage.toLowerCase().includes("email")) {
-          return toast.error("email is required")
-        }   
+          newErrors.email = "Email is required!";
+        }
         if (errorMessage.toLowerCase().includes("password")) {
-          return  toast.error("Password is required")
-          }  
-          if (errorMessage.toLowerCase().includes("confirm_password")) {
-          return  toast.error("Confirm Password is required")
-          }   
-          if (errorMessage.toLowerCase().includes("phone_number")) {
-            return  toast.error("Phone is required")
-        }  
+          newErrors.password = "Password is required!";
+        }
+        if (errorMessage.toLowerCase().includes("confirm_password")) {
+          newErrors.confirm_password = "Confirm password is required!";
+        }
+        if (errorMessage.toLowerCase().includes("phone_number")) {
+          newErrors.phone_number = "Phone number is required!";
+        }
 
-      } else{
-        toast.error(errorMessage)
+      } else {
+        console.log("Backend Error Message:", errorMessage);
+
+        if (errorMessage.includes("Password and confirm password do not match")) {
+          newErrors.password = errorMessage;
+          newErrors.confirm_password = errorMessage;
+        }
+
+        newErrors.general = errorMessage;
       }
 
-      
-
-       
+      setErrors(newErrors);
     }
-  }
-  
-  
+  };
+
   return (
     <div className="p-28 box-border">
       <div className="w-full h-screen bg-white flex justify-center items-center">
@@ -84,8 +103,13 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
             placeholder="Username*"
             value={data.username}
             onChange={handleInputChange}
-            className="w-full border p-2 rounded-md border-gray-300"
+            className={`w-full border p-2 rounded-md ${
+              errors.username ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {errors.username && (
+            <p className="text-red-500 text-sm mt-1">{errors.username}</p>
+          )}
 
           {/* Email */}
           <label className="block text-left mt-4">Email</label>
@@ -95,8 +119,13 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
             placeholder="Email ID*"
             value={data.email}
             onChange={handleInputChange}
-            className="w-full border p-2 rounded-md border-gray-300"
+            className={`w-full border p-2 rounded-md ${
+              errors.email ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {errors.email && (
+            <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+          )}
 
           {/* Password */}
           <label className="block text-left mt-4">Password</label>
@@ -106,8 +135,13 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
             placeholder="Create password*"
             value={data.password}
             onChange={handleInputChange}
-            className="w-full border p-2 rounded-md border-gray-300"
+            className={`w-full border p-2 rounded-md ${
+              errors.password ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {errors.password && (
+            <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+          )}
 
           {/* Confirm Password */}
           <label className="block text-left mt-4">Confirm Password</label>
@@ -117,8 +151,13 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
             placeholder="Confirm Password*"
             value={data.confirm_password}
             onChange={handleInputChange}
-            className="w-full border p-2 rounded-md border-gray-300"
+            className={`w-full border p-2 rounded-md ${
+              errors.confirm_password ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {errors.confirm_password && (
+            <p className="text-red-500 text-sm mt-1">{errors.confirm_password}</p>
+          )}
 
           {/* Phone Number */}
           <label className="block text-left mt-4">Mobile Number</label>
@@ -128,8 +167,18 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
             placeholder="Mobile Number*"
             value={data.phone_number}
             onChange={handleInputChange}
-            className="w-full border p-2 rounded-md border-gray-300"
+            className={`w-full border p-2 rounded-md ${
+              errors.phone_number ? "border-red-500" : "border-gray-300"
+            }`}
           />
+          {errors.phone_number && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone_number}</p>
+          )}
+
+          {/* General backend errors */}
+          {errors.general && (
+            <p className="text-red-500 text-sm mt-2">{errors.general}</p>
+          )}
 
           <button
             type="submit"
@@ -148,21 +197,6 @@ const errorMessage = err.response?.data?.message || err.response?.data?.err;
           </Link>
         </form>
       </div>
-
-      {/* Toast Container */}
-      <ToastContainer
-        position="top-right"
-        autoClose={4000}
-        hideProgressBar={false}
-        newestOnTop={true}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        limit={0}
-        preventDuplicates={false}
-      />
     </div>
   );
 };

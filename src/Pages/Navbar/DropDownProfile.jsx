@@ -19,7 +19,7 @@ const DropDownProfile = () => {
 
     <li className='flex items-center gap-2'>
       <FontAwesomeIcon className='hover:text-red-500' icon={faUser} />
-      <Link className='hover:text-red-500' to={'/SignUp'}>SignUp</Link>
+      <Link className='hover:text-red-500' to={'/signUp'}>SignUp</Link>
     </li>
 
     <li className='hover:text-red-500 cursor-pointer'> <FontAwesomeIcon icon={faQuestion}></FontAwesomeIcon> Help</li>

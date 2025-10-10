@@ -3,7 +3,7 @@ import jacket from '../../assets/Adidas-jacket.avif';
 import shoe from '../../assets/Adidas-shoes.avif';
 import { useNavigate } from 'react-router-dom';
 import item from '../../assets/korean.avif'
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../HomePage/Card';
 
@@ -74,9 +74,9 @@ const Cart = () => {
         <h1 className="w-full text-center font-bold text-3xl  hover:text-red-500 my-6">
                 My Cart
             </h1>
-        <div className="grid grid-cols-4 gap-6 px-6 ">
+        <div className="grid grid-cols-4 gap-6 px-6">
         {Products.map((Products, index) => (
-            <Card title={Products.title} subTitle={Products.subTitle} image={Products.image} price={Products.price} />
+            <Card key={index} title={Products.title} subTitle={Products.subTitle} image={Products.image} price={Products.price}/>
         ))}
     </div>
 
