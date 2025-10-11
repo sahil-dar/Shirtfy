@@ -17,7 +17,7 @@ const Card = ({ title = "", subTitle = "Super Pants", price = "$200", image = ""
                         <h1 className='absolute -left-16 float-left'>Qty: 10</h1>
                         <button
                             className="bg-gray-200 px-2 py-1 rounded hover:bg-gray-300"
-                            onClick={() => setCount(count -1)}
+                            onClick={() => setCount(prev => (prev > 1 ? prev - 1 : 1))}
                         >
                             <FontAwesomeIcon icon={faMinus} />
                         </button>
@@ -32,7 +32,7 @@ const Card = ({ title = "", subTitle = "Super Pants", price = "$200", image = ""
 
                         <button
                             className="bg-gray-200 px-2 py-1 rounded hover:bg-gray-300"
-                            onClick={() => setCount(count + 1)}
+                            onClick={() => setCount(prev => prev + 1)}
                         >
                             <FontAwesomeIcon icon={faPlus} />
                         </button>

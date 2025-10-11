@@ -18,6 +18,7 @@ const SignUp = () => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
 
+    // remove previous error as soon as user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -27,7 +28,7 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setErrors({}); 
+    setErrors({}); // clear previous errors
 
     try {
       const res = await axios.post(
@@ -41,6 +42,7 @@ const SignUp = () => {
     } catch (err) {
       console.log("Raw error:", err);
 
+      // ✅ create empty object to store errors
       const newErrors = {};
 
       const errorMessage =
@@ -48,6 +50,7 @@ const SignUp = () => {
         err.response?.data?.err ||
         "Server error";
 
+      // ✅ if backend sends "Missing required fields" error
       if (
         typeof errorMessage === "string" &&
         errorMessage.toLowerCase().includes("missing required fields")
@@ -76,9 +79,11 @@ const SignUp = () => {
           newErrors.confirm_password = errorMessage;
         }
 
+        // For other backend errors (like user already exists, etc.)
         newErrors.general = errorMessage;
       }
 
+      // ✅ finally set all errors at once
       setErrors(newErrors);
     }
   };
