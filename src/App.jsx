@@ -9,6 +9,7 @@ import {Router, Routes, Route, useLocation} from 'react-router-dom';
 import Men from "./Pages/Navbar/Men";
 import Woman from "./Pages/Navbar/Woman";
 import Sneakers from "./Pages/Navbar/Sneakers";
+import Products from "./Pages/Products/Product";
 
 
 
@@ -32,6 +33,7 @@ function App() {
         <Route path="/Men" element={<Men/>}/>
         <Route path="/Woman" element={<Woman/>}/>
         <Route path="/Sneakers" element={<Sneakers/>}/>
+        <Route path="/Product/:id" element={<Products/>}/>
 
       </Routes>
 

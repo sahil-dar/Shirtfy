@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import souled from "../../assets/souled-logo.png";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const SignUp = () => {
   const [data, setData] = useState({
@@ -90,11 +92,16 @@ const SignUp = () => {
 
   return (
     <div className="p-28 box-border">
-      <div className="w-full h-screen bg-white flex justify-center items-center">
+          <div className="w-full h-screen bg-white flex justify-center items-center">
+
         <form
           onSubmit={handleSubmit}
           className="w-2/5 bg-white border border-gray-300 rounded-md p-8"
         >
+        <button className='absolute  left-2. hover:text-red-500' title='Click to go back' onClick={() => Navigate(-1)}>
+          <FontAwesomeIcon
+              icon={faArrowLeft} />
+          </button>
           <img className="h-10 mb-4 justify-self-center" src={souled} alt="logo" />
           <h1 className="font-bold text-lg mb-6 text-center">
             SignUp with The Souled Store

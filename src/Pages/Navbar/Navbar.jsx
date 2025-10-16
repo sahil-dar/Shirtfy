@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBox, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { faHeart, faUser } from '@fortawesome/free-regular-svg-icons';
@@ -9,23 +9,32 @@ import SearchBar from '../SearchBar/SearchBar';
 import { faArrowRightFromBracket, faInfo, faQuestion } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
+  const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
+  const [isBarsDropdownOpen, setIsBarsDropdownOpen] = useState(false);
+
   return (
     <>
       <div className="fixed top-0 left-0 z-50 w-screen border bg-white">
         <div className="w-full h-20 flex items-center justify-between px-6">
+
           {/* Left Side */}
           <div className="flex items-center gap-6 font-bold text-lg text-black">
-            
+
             {/* Bars with hover dropdown */}
-            <div className="relative group">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsBarsDropdownOpen(true)}
+              onMouseLeave={() => setIsBarsDropdownOpen(false)}
+            >
               <FontAwesomeIcon
-                className="cursor-pointer hover:text-red-500 ml-2"
+                className="cursor-pointer hover:text-red-500 ml-2 text-2xl"
                 icon={faBars}
               />
-              {/* Dropdown appears on hover */}
-              <div className="absolute hidden group-hover:flex mt-3 bg-white border rounded-md shadow-lg p-3 w-40 z-50">
-                <DropDownBars />
-              </div>
+              {isBarsDropdownOpen && (
+                <div className="absolute flex flex-col mt-3 bg-white border rounded-md shadow-lg p-3 w-40 z-50">
+                  <DropDownBars />
+                </div>
+              )}
             </div>
 
             <Link to={'/Men'}>
@@ -50,32 +59,38 @@ const Navbar = () => {
             <div className="flex items-center gap-6 text-2xl">
 
               {/* Profile with hover dropdown */}
-              <div className="relative group">
+              <div
+                className="relative"
+                onMouseEnter={() => setIsUserDropdownOpen(true)}
+                onMouseLeave={() => setIsUserDropdownOpen(false)}
+              >
                 <FontAwesomeIcon
                   icon={faUser}
                   className="cursor-pointer hover:text-red-500"
                 />
-                <div className="absolute hidden group-hover:flex flex-col mt-3 bg-white border rounded-md shadow-lg p-3 w-40 z-50">
-                  <ul className="flex flex-col gap-3">
-                    <li className="flex items-center gap-2"> 
-                      <FontAwesomeIcon className="hover:text-red-500" icon={faUser} />
-                      <Link className="hover:text-red-500" to={'/login'}>Login</Link>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <FontAwesomeIcon className="hover:text-red-500" icon={faUser} />
-                      <Link className="hover:text-red-500" to={'/SignUp'}>SignUp</Link>
-                    </li>
-                    <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
-                      <FontAwesomeIcon icon={faQuestion}/> Help
-                    </li>
-                    <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
-                      <FontAwesomeIcon icon={faArrowRightFromBracket}/> Log Out
-                    </li>
-                    <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
-                      <FontAwesomeIcon icon={faInfo}/> About Us
-                    </li>
-                  </ul>
-                </div>
+                {isUserDropdownOpen && (
+                  <div className="absolute flex flex-col mt-1 -left-10 bg-white border rounded-md shadow-lg p-3 w-40 z-50">
+                    <ul className="flex flex-col gap-3">
+                      <li className="flex items-center gap-2"> 
+                        <FontAwesomeIcon className="hover:text-red-500" icon={faUser} />
+                        <Link className="hover:text-red-500" to={'/login'}>Login</Link>
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <FontAwesomeIcon className="hover:text-red-500" icon={faUser} />
+                        <Link className="hover:text-red-500" to={'/signUp'}>SignUp</Link>
+                      </li>
+                      <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
+                        <FontAwesomeIcon icon={faQuestion}/> Help
+                      </li>
+                      <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
+                        <FontAwesomeIcon icon={faArrowRightFromBracket}/> Log Out
+                      </li>
+                      <li className="hover:text-red-500 cursor-pointer flex items-center gap-2"> 
+                        <FontAwesomeIcon icon={faInfo}/> About Us
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
 
               {/* Other Icons */}
@@ -99,6 +114,7 @@ const Navbar = () => {
               />
             </div>
           </div>
+
         </div>
       </div>
     </>
