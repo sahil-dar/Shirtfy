@@ -80,7 +80,7 @@ const HomePage = () => {
         {items.map((product) => (
           <Card
             key={product.id}
-            id={product.id} // important!
+            id={product.id}
             title={product.title}
             subTitle={product.subTitle}
             price={product.price}

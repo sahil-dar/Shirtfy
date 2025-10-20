@@ -1,10 +1,12 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import HeartToggle from "../Favourites/HeartToggle"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons'
 
 const Card = ({ id, title, subTitle, price, image }) => {
+  const location = useLocation()
+
   return (
     <div className="relative border p-2 rounded-2xl">
       <img src={image} className="rounded-2xl mb-3 h-64 w-full" alt={title} />
@@ -20,7 +22,7 @@ const Card = ({ id, title, subTitle, price, image }) => {
       </h1>
 
       <div className="absolute top-6 right-6">
-        <HeartToggle id={id} size={25} filledColor="red" emptyColor="gray" />
+          {location.pathname !== '/cart' && <HeartToggle id={id} size={25} filledColor="red" emptyColor="gray" />}
       </div>
     </div>
   )

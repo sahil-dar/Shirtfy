@@ -1,65 +1,28 @@
 import React from 'react';
 import jacket from '../../assets/Adidas-jacket.avif';
 import shoe from '../../assets/Adidas-shoes.avif';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import item from '../../assets/korean.avif'
 import { faArrowLeft, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Card from '../HomePage/Card';
+import HeartToggle from '../Favourites/HeartToggle';
+import Favourites from '../Favourites/Favourites';
 
-const Cart = () => {
-
-    const Navigate = useNavigate();
-    const Products = [
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
-        {
-            title: "Super Pants: Beige (Classic Fit)",
-            subTitle: "Super Pants",
-            image: item,
-            price: "$200",
-        },
+export const items = [
+    { id: 9, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 10, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 11, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 12, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 13, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 14, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 15, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" },
+      { id: 16, title: "Super Pants: Beige (Classic Fit)", subTitle: "Super Pants", image: item, price: "$200" }
     ]
+    const Cart = () => {
+    
+        const Navigate = useNavigate();
+        const location = useLocation()
 
     return (
         <>
@@ -75,10 +38,17 @@ const Cart = () => {
                 My Cart
             </h1>
         <div className="grid grid-cols-4 gap-6 px-6">
-        {Products.map((Products, index) => (
-            <Card key={index} title={Products.title} subTitle={Products.subTitle} image={Products.image} price={Products.price}/>
+        {items.map((product) => (
+          <Card
+            key={product.id}
+            id={product.id}
+            title={product.title}
+            subTitle={product.subTitle}
+            price={product.price}
+            image={product.image}
+          />
         ))}
-    </div>
+      </div>
 
             <footer className='flex cursor-default w-full border bg-zinc-50 p-6 mt-4 content-center justify-around'>
                 <div className=''>
