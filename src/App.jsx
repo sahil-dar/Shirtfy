@@ -10,6 +10,7 @@ import Men from "./Pages/Navbar/Men";
 import Woman from "./Pages/Navbar/Woman";
 import Sneakers from "./Pages/Navbar/Sneakers";
 import Products from "./Pages/Products/Product";
+import Otp from "./Pages/Otp/Otp";
 
 
 
@@ -22,11 +23,12 @@ function App() {
 
   return (
     <>
-    {Location.pathname !== '/login' && Location.pathname !== '/signUp' && <Navbar/>}
+    {Location.pathname !== '/login' && Location.pathname !== '/signUp' && Location.pathname !== '/Otp' && <Navbar/>}
       
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/Otp" element={<Otp/>}/>
         <Route path="/signUp" element={<SignUp/>}/>
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/Favourites" element={<Favourites/>}/>

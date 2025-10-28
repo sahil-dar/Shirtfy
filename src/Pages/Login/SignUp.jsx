@@ -199,7 +199,12 @@ const SignUp = () => {
             Sign Up
           </button>
 
-          <Link to={"/"}>
+          <Link to={'/Otp'}
+          state={{from: 'signUp'}}>
+                        <button className='w-[22rem] mt-2 p-1 text-black font-bold text-lg border  border-red-500 rounded-md'> Login with OTP </button>
+                      </Link>
+
+          <Link to={"/login"}>
             <p className="text-gray-600 mt-3">
               Already a Customer?{" "}
               <span className="text-red-500 hover:underline cursor-pointer">

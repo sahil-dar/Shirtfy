@@ -63,7 +63,10 @@ const Login = () => {
             <button className='w-96 bg-red-500 mt-10 p-1 text-white font-bold text-lg rounded-md'> Sign in </button>
           </div>
           <div >
-            <button className='w-96 mt-2 p-1 text-black font-bold text-lg border  border-red-500 rounded-md'> Login with OTP </button>
+            <Link to={'/Otp'}
+            state={{from: 'login'}}>
+              <button className='w-96 mt-2 p-1 text-black font-bold text-lg border  border-red-500 rounded-md'> Login with OTP </button>
+            </Link>
 
             <br />
             <Link to={'/signUp'}>
