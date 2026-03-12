@@ -43,6 +43,7 @@ const Login = () => {
           </div>
           <br />
 
+<br />
           <p className='float-left mt-2 ml-2 font-semibold'>Password</p>
           <div className=' float-left w-full '>
             <FontAwesomeIcon
