@@ -24,6 +24,7 @@ const Card = ({ id, title, subTitle, price, image }) => {
       <div className="absolute top-6 right-6">
           {location.pathname !== '/cart' && <HeartToggle id={id} size={25} filledColor="red" emptyColor="gray" />}
       </div>
+      <br />
     </div>
   )
 }
